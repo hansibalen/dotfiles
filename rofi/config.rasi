@@ -1,0 +1,40 @@
+configuration {
+	modi: "window,run,drun,ssh";
+ 	display-ssh:    "";
+    	display-run:    "";
+    	display-drun:   "";
+    	display-window: "";
+    	display-combi:  "";
+    	show-icons:     true;
+	icon-size: 30;
+  	hover-select: true;
+  	me-select-entry: "";
+  	me-accept-entry: [ MousePrimary];
+}
+
+//custom config here
+
+	@theme "~/.config/rofi/nord.rasi"
+
+	timeout {
+	action: "kb-cancel";
+	delay:  0;
+	}
+	  
+  	filebrowser {
+	      directories-first: true;
+	      sorting-method:    "name";
+	}
+	
+	element {
+	children: [element-icon, element-text];
+	spacing:10px;
+	}
+	
+	element-icon {
+	size: 1.2em;
+	}
+	
+	element-text {
+	vertical-align: 0.5;
+	}
